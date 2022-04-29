@@ -94,7 +94,11 @@ THEN I exit the application, and the HTML is generated
 
 ### Day Two
 
-- Wrote out my different position js files, as well as their test js files.
+- Wrote out my different Profession js files, as well as their test js files.
 - Ran tests on the position js files; they all succeeded.
 - Started figuring out layout for HTML/CSS files.
 - Typed up README file for project.
+
+### Day Three
+
+- Worked on template for HTML, CSS, and Profession Cards.
