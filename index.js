@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const createCard = require("./src/card-template");
+const createHTML = require("./src/html-template");
+const createStyles = require("./src/css-template");
 
 const Engineer = require("./lib/engineer");
 const Manager = require("./lib/manager");
@@ -12,22 +15,22 @@ function managerForm() {
         .prompt([
             {
                 type: "input",
-                message: "Name?",
+                message: "What is your manager's name?",
                 name: "name",
             },
             {
                 type: "input",
-                message: "ID number?",
+                message: "What is their ID number?",
                 name: "id",
             },
             {
                 type: "input",
-                message: "Email?",
+                message: "what is their Email?",
                 name: "email",
             },
             {
                 type: "input",
-                message: "Office number?",
+                message: "What is their office number?",
                 name: "officeNumber",
             },
         ])
@@ -52,7 +55,7 @@ function directory() {
         .prompt([
             {
                 type: "list",
-                message: "Which position are you adding?",
+                message: "Which position will you add next?",
                 name: "directory",
                 choices: [
                     "Manager",
@@ -65,13 +68,26 @@ function directory() {
         .then(data => {
             console.log(myTeam);
 
-            if (data.directory === "Manager") {
-                managerForm();
-            } else if (data.directory === "Engineer"){
-                engineerForm();
-            } else if (data.directory === "Intern") {
-                internForm();
-            }
+            switch (data.directory)
+                {
+                    case "Manager":
+                        managerForm();
+                        break;
+                    case "Engineer":
+                        engineerForm();
+                        break;
+                    case "Intern":
+                        internForm();
+                        break;
+                    case "Finish":
+                        fs.writeFile("./dist/index.html", createHTML(),  (err) =>
+                        err ? console.error(err) : console.log("HTML Complete!")
+                        );
+                        fs.writeFile("./dist/styles.css", createStyles(),  (err) =>
+                        err ? console.error(err) : console.log("CSS Complete!")
+                        );
+                        break;
+                }
              
         })
 }
@@ -81,22 +97,22 @@ function engineerForm() {
         .prompt([
             {
                 type: "input",
-                message: "Name?",
+                message: "What is your engineer's name?",
                 name: "name",
             },
             {
                 type: "input",
-                message: "ID number?",
+                message: "What is their ID number?",
                 name: "id",
             },
             {
                 type: "input",
-                message: "Email?",
+                message: "What is their Email?",
                 name: "email",
             },
             {
                 type: "input",
-                message: "Git Username?",
+                message: "What is their Git-username?",
                 name: "github",
             },
         ])
@@ -121,22 +137,22 @@ function internForm() {
         .prompt([
             {
                 type: "input",
-                message: "Name?",
+                message: "What is your intern's name?",
                 name: "name",
             },
             {
                 type: "input",
-                message: "ID number?",
+                message: "What is their ID number?",
                 name: "id",
             },
             {
                 type: "input",
-                message: "Email?",
+                message: "What is their Email?",
                 name: "email",
             },
             {
                 type: "input",
-                message: "School?",
+                message: "What school did they attend?",
                 name: "school",
             },
         ])
