@@ -1,7 +1,6 @@
-const createCard = require("./card-template");
+//const createCard = require("./card-template");
 
-const createHTML = (myTeam) => {
-
+const createHTML = () => {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,14 +24,17 @@ const createHTML = (myTeam) => {
         ></i>
       </h1>
     </header>
-    <main class="container">`
-}
+    <main class="container">
+`;
+};
 
-const bottomHTML = () => {    
-  return  `</main>
+const bottomHTML = () => {
+  return `    </main>
   </body>
 </html>`;
-}
+};
 
-module.exports = createHTML, bottomHTML
-
+module.exports = {
+  createHTML,
+  bottomHTML,
+};
