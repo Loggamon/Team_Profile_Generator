@@ -86,6 +86,10 @@ function directory() {
                         fs.writeFile("./dist/styles.css", createStyles(),  (err) =>
                         err ? console.error(err) : console.log("CSS Complete!")
                         );
+                        fs.appendFile("./dist/index.html", myTeam.forEach(createCard), (err) =>
+                        err ? console.error(err) : console.log("CSS Complete!")
+                        );
+                        //myTeam.forEach(createCard);
                         break;
                 }
              
