@@ -35,16 +35,13 @@ function managerForm() {
       },
     ])
     .then((data) => {
-      //console.log(data);
       const newManager = new Manager(
         data.name,
         data.id,
         data.email,
         data.officeNumber
       );
-      console.log(newManager);
       myTeam.push(newManager);
-      //console.log(myTeam);
       directory();
     });
 }
@@ -60,8 +57,6 @@ function directory() {
       },
     ])
     .then((data) => {
-      console.log(myTeam);
-
       switch (data.directory) {
         case "Manager":
           managerForm();
@@ -123,16 +118,13 @@ function engineerForm() {
       },
     ])
     .then((data) => {
-      //console.log(data);
       const newEngineer = new Engineer(
         data.name,
         data.id,
         data.email,
         data.github
       );
-      //console.log(newEngineer);
       myTeam.push(newEngineer);
-      //console.log(myTeam);
       directory();
     });
 }
@@ -162,9 +154,7 @@ function internForm() {
       },
     ])
     .then((data) => {
-      //console.log(data);
       const newIntern = new Intern(data.name, data.id, data.email, data.school);
-      //console.log(newIntern);
       myTeam.push(newIntern);
       directory();
       //return newIntern;

@@ -1,5 +1,3 @@
-//const createCard = require("./card-template");
-
 const createHTML = () => {
   return `<!DOCTYPE html>
 <html lang="en">
