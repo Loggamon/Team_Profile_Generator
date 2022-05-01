@@ -65,9 +65,9 @@ THEN I exit the application, and the HTML is generated
 
 - Upon finishing the program, a new HTML and CSS file should be created, including the information the user added.
 
-![A visual of the code used in the project](./assets/TPGCode.png)
-
 ## Daily Progress
+
+![A visual of the code used in the project](./assets/TPGCode.png)
 
 ### Day One
 
@@ -93,4 +93,4 @@ THEN I exit the application, and the HTML is generated
 
 ## VIdeo DEMO
 
-- [Here is the link to the video demonstration!](videolink here!)
+- [Here is the link to the video demonstration!](https://www.youtube.com/watch?v=pcuECTF0Fuc)
