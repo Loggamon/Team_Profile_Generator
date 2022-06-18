@@ -1,6 +1,10 @@
 # Team Profile Generator
 
+![License](https://img.shields.io/badge/license-MIT_License-red.svg)
+
 ![A visual of how the HTML file will look afterword](./assets/teamProfileGenerator.png)
+
+Check out the Repo [here](https://github.com/Loggamon/Team_Profile_Generator)
 
 ## The Breakdown
 
